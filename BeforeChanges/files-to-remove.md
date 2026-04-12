@@ -25,18 +25,6 @@ The items below serve no unique architectural purpose and are candidates for rem
 
 ---
 
-## 4. Deprecated / Superseded Classes
-
-| File | Superseded By | Reason |
-|---|---|---|
-| `ftp/FTPCommand.java` | `ftp/FTPCmd.java` | `FTPCommand` is the old integer-constant command table. `FTPCmd` is the enum replacement. Both exist; `FTPCommand` is kept only for backward compatibility. |
-| `nntp/ArticlePointer.java` | `nntp/ArticleInfo.java` | `ArticlePointer` is marked `@deprecated` in the source. `ArticleInfo` replaced it. |
-| `nntp/NNTPCommand.java` | `nntp/NNTPReply.java` + enum approach | Old integer-constant command table, mirrors the deprecated pattern seen in FTP. |
-
-**Risk:** Medium — removing these breaks any external code that still uses them, but within this codebase they are not actively used by the main clients.
-
----
-
 ## 5. Build / Static Analysis Config Files
 **Paths:**
 - `checkstyle.xml`
