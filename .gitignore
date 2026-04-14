@@ -1,1 +1,3 @@
-BeforeChanges/
+BeforeChanges/*.md
+BeforeChanges/*.py
+BeforeChanges/*.docx
